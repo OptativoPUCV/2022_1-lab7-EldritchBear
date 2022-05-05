@@ -634,3 +634,69 @@ Thu May  5 17:34:52 UTC 2022:
  tests:  6|2
 total_score: 35/70
 a4694fc
+Thu May  5 23:38:47 UTC 2022: 
+ heap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:58:26: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   pq->heapArray[pq->size = NULL;
+                          ^
+heap.c:58:32: error: expected ‘]’ before ‘;’ token
+   pq->heapArray[pq->size = NULL;
+                                ^
+heap.c:58:16: error: value computed is not used [-Werror=unused-value]
+   pq->heapArray[pq->size = NULL;
+   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+   pq->size += -1;
+   ~~~~~~~~~~~~~~~
+ 
+                 
+   while(1){
+   ~~~~~~~~~     
+     if(pq->heapArray[i].priority > pq->heapArray[(2*i)+1].priority || pq->heapArray[i].priority > pq->heapArray[(2*i)+2].priority)break;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+                 
+     if(pq->heapArray[i].priority < pq->heapArray[(2*i)+1].priority){
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       aux = pq->heapArray[(2*i)+1];
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       pq->heapArray[(2*i)+1] = pq->heapArray[i];
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       pq->heapArray[i] = aux;
+       ~~~~~~~~~~~~~~~~~~~~~~~
+     }
+     ~           
+ 
+                 
+     if(pq->heapArray[i].priority < pq->heapArray[(2*i)+2].priority){
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       aux = pq->heapArray[(2*i)+2];
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       pq->heapArray[(2*i)+2] = pq->heapArray[i];
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       pq->heapArray[i] = aux;
+       ~~~~~~~~~~~~~~~~~~~~~~~
+     }
+     ~           
+     i++;
+     ~~~~        
+   }
+   ~             
+ }
+ ~               
+In file included from test.c:4:0:
+heap.c:77:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+In file included from test.c:4:0:
+heap.c:56:13: error: unused variable ‘aux’ [-Werror=unused-variable]
+   heapElem *aux;
+             ^~~
+heap.c:55:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   int i = 0;
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+b67bb1a
