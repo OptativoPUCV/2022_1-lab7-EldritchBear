@@ -75,6 +75,7 @@ void heap_pop(Heap* pq){
     }
     
     i++;
+    if(i == pq->capac)break;
     if(i == pq->size)break;
   }
 }
