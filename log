@@ -496,3 +496,9 @@ heap.c:42:23: error: invalid type argument of ‘->’ (have ‘heapElem {aka st
                        ^~
 Compilation failed
 cbcc5b7
+Thu May  5 15:57:49 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+302f076
