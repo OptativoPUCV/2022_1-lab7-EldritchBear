@@ -353,3 +353,20 @@ heap.c:46:5: error: ‘aux’ undeclared (first use in this function)
      ^~~
 Compilation failed
 6920699
+Thu May  5 15:47:14 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:36:18: error: ‘capac’ undeclared (first use in this function)
+   for(i = 0; i < capac ; i++){
+                  ^~~~~
+heap.c:36:18: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:37:25: error: invalid operands to binary == (have ‘heapElem {aka struct nodo}’ and ‘void *’)
+     if(pq->heapArray[i] == NULL)
+        ~~~~~~~~~~~~~~~~ ^~
+heap.c:46:5: error: ‘aux’ undeclared (first use in this function)
+     aux = pq->heapArray[i-1];
+     ^~~
+Compilation failed
+91a0383
