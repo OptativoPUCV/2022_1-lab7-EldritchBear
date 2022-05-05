@@ -400,3 +400,13 @@ heap.c:48:22: error: incompatible types when assigning to type ‘heapElem {aka 
                       ^
 Compilation failed
 48c1829
+Thu May  5 15:47:57 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:37:25: error: invalid operands to binary == (have ‘heapElem {aka struct nodo}’ and ‘void *’)
+     if(pq->heapArray[i] == NULL)
+        ~~~~~~~~~~~~~~~~ ^~
+Compilation failed
+cc80cbd
