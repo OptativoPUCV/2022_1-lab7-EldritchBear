@@ -330,3 +330,9 @@ Thu May  5 15:34:29 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 72d11b1
+Thu May  5 15:36:43 UTC 2022: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|2
+total_score: 20/70
+37e2988
