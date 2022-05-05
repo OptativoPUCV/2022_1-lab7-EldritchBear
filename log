@@ -873,3 +873,14 @@ Thu May  5 23:54:55 UTC 2022:
  tests:  7|1
 total_score: 60/70
 a3c9e77
+Thu May  5 23:56:42 UTC 2022: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:45:5: error: ‘aux’ undeclared (first use in this function)
+     aux = pq->heapArray[i];
+     ^~~
+heap.c:45:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d659ec3
