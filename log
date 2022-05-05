@@ -190,3 +190,29 @@ In file included from test.c:2:0:
               ^~~~~~
 Compilation failed
 6b96b72
+Thu May  5 15:23:41 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:37:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   Heap* hp->capac = 3;
+           ^~
+heap.c:37:11: error: expected expression before ‘->’ token
+heap.c:38:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   Heap *hp->heapArray = (heapElem *) malloc (hp->capac,sizeof(heapElem));
+           ^~
+heap.c:38:11: error: expected expression before ‘->’ token
+heap.c:38:46: error: ‘hp’ undeclared (first use in this function)
+   Heap *hp->heapArray = (heapElem *) malloc (hp->capac,sizeof(heapElem));
+                                              ^~
+heap.c:38:46: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:38:38: error: too many arguments to function ‘malloc’
+   Heap *hp->heapArray = (heapElem *) malloc (hp->capac,sizeof(heapElem));
+                                      ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:539:14: note: declared here
+ extern void *malloc (size_t __size) __THROW __attribute_malloc__ __wur;
+              ^~~~~~
+Compilation failed
+df8af81
