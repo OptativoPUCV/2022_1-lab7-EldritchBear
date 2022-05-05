@@ -605,3 +605,14 @@ heap.c:38:34: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 1b84e29
+Thu May  5 17:33:21 UTC 2022: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:37:34: error: comparison between pointer and integer [-Werror]
+     if(pq->heapArray[i].priority == NULL)
+                                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+dd78d94

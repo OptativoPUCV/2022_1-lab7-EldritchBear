@@ -29,9 +29,8 @@ void heap_push(Heap* pq, void* data, int priority){
   
   if (pq->size == pq->capac){
     pq->capac = (2*pq->capac)+1;
+    pq->heapArray = realloc(pq->heapArray,pq->capac);
   }
-  
-  pq->heapArray = realloc(pq->heapArray,pq->capac);
 
   for(i = 0; i < pq->capac ; i++){
     printf("%d\n",pq->heapArray->priority);
