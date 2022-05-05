@@ -456,3 +456,9 @@ heap.c:39:32: error: ‘pq->heapArray’ is a pointer; did you mean to use ‘->
                                 ->
 Compilation failed
 3431520
+Thu May  5 15:54:32 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+6a03bd1
