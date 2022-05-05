@@ -410,3 +410,9 @@ heap.c:37:25: error: invalid operands to binary == (have ‘heapElem {aka struct
         ~~~~~~~~~~~~~~~~ ^~
 Compilation failed
 cc80cbd
+Thu May  5 15:48:14 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+8137557
