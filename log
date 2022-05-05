@@ -445,3 +445,14 @@ Thu May  5 15:53:22 UTC 2022:
  tests:  2|2
 total_score: 20/70
 79eed6a
+Thu May  5 15:54:23 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:39:32: error: ‘pq->heapArray’ is a pointer; did you mean to use ‘->’?
+       printf("%d",pq->heapArray.priority);
+                                ^
+                                ->
+Compilation failed
+3431520
