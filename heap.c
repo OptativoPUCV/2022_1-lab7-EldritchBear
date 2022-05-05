@@ -74,6 +74,7 @@ void heap_pop(Heap* pq){
       pq->heapArray[i] = aux;
     }
     i++;
+    if(i == pq->size)break;
   }
 }
 
