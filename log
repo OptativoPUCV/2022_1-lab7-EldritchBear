@@ -336,3 +336,20 @@ Thu May  5 15:36:43 UTC 2022:
  tests:  2|2
 total_score: 20/70
 37e2988
+Thu May  5 15:47:02 UTC 2022: 
+ heap.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:31:20: error: ‘capac’ undeclared (first use in this function)
+     pq->capac = (2*capac)+1;
+                    ^~~~~
+heap.c:31:20: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:37:25: error: invalid operands to binary == (have ‘heapElem {aka struct nodo}’ and ‘void *’)
+     if(pq->heapArray[i] == NULL)
+        ~~~~~~~~~~~~~~~~ ^~
+heap.c:46:5: error: ‘aux’ undeclared (first use in this function)
+     aux = pq->heapArray[i-1];
+     ^~~
+Compilation failed
+6920699
