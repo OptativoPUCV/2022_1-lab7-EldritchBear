@@ -243,3 +243,30 @@ heap.c:38:9: error: unused variable ‘heapArray’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 29995c6
+Thu May  5 15:29:06 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:37:22: error: too few arguments to function ‘calloc’
+   Heap *pq = (Heap*) calloc (sizeof(Heap));
+                      ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+heap.c:38:29: error: too many arguments to function ‘malloc’
+   Heap *heapArray = (Heap*) malloc (3,sizeof(Heap));
+                             ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:539:14: note: declared here
+ extern void *malloc (size_t __size) __THROW __attribute_malloc__ __wur;
+              ^~~~~~
+In file included from test.c:4:0:
+heap.c:38:9: error: unused variable ‘heapArray’ [-Werror=unused-variable]
+   Heap *heapArray = (Heap*) malloc (3,sizeof(Heap));
+         ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7cca314
