@@ -1051,3 +1051,9 @@ heap.c:32:53: error: invalid operands to binary * (have ‘void *’ and ‘long
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
 Compilation failed
 b85ff23
+Fri May  6 00:19:39 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+bb62842
