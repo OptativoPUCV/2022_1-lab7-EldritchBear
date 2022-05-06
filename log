@@ -936,3 +936,13 @@ heap.c:32:66: error: expected expression before ‘heapElem’
 cc1: all warnings being treated as errors
 Compilation failed
 bd359a3
+Fri May  6 00:05:10 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:32:7: error: conversion to non-scalar type requested
+       pq->heapArray = (heapElem ) realloc (pq->heapArray,sizeof(heapElem));
+       ^~
+Compilation failed
+2471fe1
