@@ -1041,3 +1041,13 @@ Fri May  6 00:17:37 UTC 2022:
  tests:  8|0
 total_score: 70/70
 3a997ed
+Fri May  6 00:19:22 UTC 2022: 
+ heap.c | 24 ++++++++++++++----------
+ 1 file changed, 14 insertions(+), 10 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:32:53: error: invalid operands to binary * (have ‘void *’ and ‘long unsigned int’)
+     pq->heapArray = realloc(pq->heapArray,pq->capac)*sizeof(heapElem);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+Compilation failed
+b85ff23

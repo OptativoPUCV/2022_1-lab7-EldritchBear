@@ -25,22 +25,26 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-  int i = 0;
+  int i;
+  
+  if (pq->size == pq->capac){
+    pq->capac = (2*pq->capac)+1;
+    pq->heapArray = realloc(pq->heapArray,pq->capac)*sizeof(heapElem);
+  }
 
-  if(pq->size == pq->capac){
-    pq->capac = (pq->capac * 2) + 1;
-    pq->heapArray = (heapElem *) realloc (pq->heapArray,pq->size*sizeof(heapElem));
- }
-
-  pq->heapArray[pq->size].data = data;
-  pq->heapArray[pq->size].priority = priority;
-
-  i= pq->size;
+  for(i = 0; i < pq->capac ; i++){
+    if(pq->heapArray[i].priority == 0)
+    {
+      pq->heapArray[i].data = data;
+      pq->heapArray[i].priority = priority;
+      break;
+    }
+  }
 
   while(pq->heapArray[i].priority > pq->heapArray[(i-1)/2].priority){
-    heapElem aux = pq->heapArray[i];
-    pq->heapArray[i] = pq->heapArray[(i-1)/2];
-    pq->heapArray[(i-1)/2] = aux;
+    heapElem aux = pq->heapArray[(i-1)/2];
+    pq->heapArray[(i-1)/2] = pq->heapArray[i];
+    pq->heapArray[i] = aux;
     i = (i-1)/2;
   }
   pq->size += 1;
