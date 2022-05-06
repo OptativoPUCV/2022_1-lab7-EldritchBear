@@ -982,3 +982,18 @@ Fri May  6 00:13:03 UTC 2022:
  tests:  8|0
 total_score: 70/70
 0408990
+Fri May  6 00:16:38 UTC 2022: 
+ heap.c | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:31:30: error: expected ‘;’ before ‘)’ token
+     pq->capac = pq->capac * 2) + 1;
+                              ^
+heap.c:31:30: error: expected statement before ‘)’ token
+heap.c:31:32: error: statement with no effect [-Werror=unused-value]
+     pq->capac = pq->capac * 2) + 1;
+                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+903e328
