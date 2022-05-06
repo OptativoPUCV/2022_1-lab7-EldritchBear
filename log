@@ -952,3 +952,16 @@ Fri May  6 00:05:33 UTC 2022:
  tests:  7|1
 total_score: 60/70
 488dbad
+Fri May  6 00:05:53 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:42:11: error: incompatible types when assigning to type ‘heapElem * {aka struct nodo *}’ from type ‘heapElem {aka struct nodo}’
+       aux = pq->heapArray[i];
+           ^
+heap.c:44:30: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘heapElem * {aka struct nodo *}’
+       pq->heapArray[(i-1)/2] = aux;
+                              ^
+Compilation failed
+0c13a9c
