@@ -976,3 +976,9 @@ heap.c:42:12: error: ‘aux’ may be used uninitialized in this function [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 75d253c
+Fri May  6 00:13:03 UTC 2022: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  8|0
+total_score: 70/70
+0408990
