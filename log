@@ -965,3 +965,14 @@ heap.c:44:30: error: incompatible types when assigning to type ‘heapElem {aka 
                               ^
 Compilation failed
 0c13a9c
+Fri May  6 00:06:34 UTC 2022: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+test.c: In function ‘heap_push’:
+heap.c:42:12: error: ‘aux’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+       *aux = pq->heapArray[i];
+       ~~~~~^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+75d253c
